@@ -27,6 +27,11 @@
       "description": "your channel id in format -12352626:-34466(from channel id:to channel id) if you want to give more channels seperate them with white space",
       "value": ""
     },
+        "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "1054834409 1229638814",
+      "required": false
+    }, 
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
