@@ -1,2 +1,5 @@
 https://github.com/Mahesh0253/pyrogram/archive/beta.zip
 tgcrypto
+SQLAlchemy~=1.4.21
+psycopg2
+pyromod~=1.5
