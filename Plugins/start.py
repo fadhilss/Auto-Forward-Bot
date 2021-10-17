@@ -1,11 +1,10 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, ReplyKeyboardMarkup
-from config import ADMINS
 
 
 
 # Start Message
-@Client.on_message(filters.user(ADMINS) & filters.command("channel") & ~filters.channel)
+@Client.on_message(filters.user(1208929752) & filters.command("channel") & ~filters.channel)
 async def start(bot, msg):
 	user = await bot.get_me()
 	mention = user["mention"]
