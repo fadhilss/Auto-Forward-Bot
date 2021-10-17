@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, BigInteger
-from Plugins.database import BASE, SESSION
+from Plugins.database.sql import BASE, SESSION
 
 
 class Channel(BASE):
