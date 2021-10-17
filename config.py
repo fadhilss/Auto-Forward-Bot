@@ -7,4 +7,4 @@ class Config(object):
       API_HASH = os.environ.get("API_HASH")
       CHANNEL = list(x for x in os.environ.get("CHANNEL_ID", "").replace("\n", " ").split(' '))
       DB_URI = os.environ.get("DATABASE_URL", "")
-      SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "").split()]
+      ADMINS = [int(x) for x in os.environ.get("ADMINS", "").split()]
