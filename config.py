@@ -1,5 +1,5 @@
 import os
-from os import environ
+
 
 class Config(object):
       BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
