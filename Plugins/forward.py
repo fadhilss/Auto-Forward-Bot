@@ -6,13 +6,13 @@ logger = logging.getLogger(__name__)
 import asyncio
 from pyrogram import filters
 from bot import channelforward
-from config import Config 
+from config import *
 
-@channelforward.on_message(filters.channel & filters.group)
+@channelforward.on_message(filters.channel)
 async def forward(c, m):
     # Forwarding the messages to the channel
 
-    for id in Config.CHANNEL:
+    for id in CHANNEL:
        from_channel, to_group = id.split(":")
        if m.chat.id == int(from_channel):
           await m.forward(int(to_group), as_copy=True)
