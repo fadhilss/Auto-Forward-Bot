@@ -1,4 +1,5 @@
 import os
+from os import environ
 
 class Config(object):
       BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
@@ -7,9 +8,4 @@ class Config(object):
       CHANNEL = list(x for x in os.environ.get("CHANNEL_ID", "").replace("\n", " ").split(' '))
       DATABASE_URL = os.environ.get('DATABASE_URL', None)
       DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql") 
-      try:
-    ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
-        ADMINS.append(int(x))
-except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+      SUDO_USERS_ID = [int(x) for x in environ.get("SUDO_USERS_ID", "").split()]
