@@ -1,5 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, ReplyKeyboardMarkup
+from config import Config
+
 
 
 # Start Message
